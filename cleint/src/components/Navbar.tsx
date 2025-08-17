@@ -17,9 +17,18 @@ export default function Navbar() {
 
   const menuVariants = {
     hidden: { x: "100%", opacity: 0 },
-    visible: { x: 0, opacity: 1, transition: { type: "spring", stiffness: 70 } },
-    exit: { x: "100%", opacity: 0, transition: { duration: 0.1 } },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { type: "spring" as const, stiffness: 70 }, // <-- as const
+    },
+    exit: {
+      x: "100%",
+      opacity: 0,
+      transition: { duration: 0.1 },
+    },
   };
+
 
   const dropdownVariants = {
     hidden: { opacity: 0, y: -10 },
@@ -32,9 +41,8 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 80 }}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "shadow-lg bg-white" : "bg-white"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "shadow-lg bg-white" : "bg-white"
+        }`}
     >
       {/* Top Bar */}
       <div className="bg-gray-100 hidden md:flex justify-around items-center px-6 lg:px-20 py-2 text-sm">
