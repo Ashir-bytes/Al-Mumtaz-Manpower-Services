@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Loader from "./components/Loader";
 import Home from "./pages/Home";
-
+import "./App.css"
 function App() {
   const [loading, setLoading] = useState(true);
 
