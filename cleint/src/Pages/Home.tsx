@@ -6,6 +6,8 @@ import JourneySection from '../components/JourneySection'
 import CompanyInfo from '../components/CompanyInfo'
 import JobCategories from '../components/JobCategories'
 import Testimonials from '../components/Testimonials'
+import Partners from '../components/Partners'
+import Faq from '../components/Faq'
 import Footer from '../components/Footer'
 
 export default function Home() {
@@ -89,8 +91,16 @@ export default function Home() {
                 </h1>
                 <Testimonials />
             </div>
-            <hr className='bg-zinc-600' />
+            {/* <hr className='bg-zinc-600' /> */}
 
+            <div className="w-screen min-h-1/2 px-10 flex flex-col justify-center items-center gap-8 p-12">
+                <h1 className="text-4xl font-bold text-center text-zinc-800 mb-8">
+                    Our Trusted Partners
+                </h1>
+                <Partners />
+            </div>
+
+            <Faq />
             <Footer />
         </div >
     )
