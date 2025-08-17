@@ -35,10 +35,10 @@ const Counter = ({ target }: { target: number }) => {
 const JourneySection = () => {
   return (
     <div className="w-full bg-gradient-to-r from-red-600 to-red-400 py-12 rounded-2xl shadow-md">
-      <h2 className="text-center text-3xl font-bold text-gray-800 mb-10">
-        The Journey of <span className="text-red-600">Al Mumtaz</span>
+      <h2 className="text-center text-3xl font-bold text-gray-100 mb-10">
+        The Journey of <span className="text-white">Al Mumtaz</span>
         <br />
-        <span className="text-gray-600 text-lg">ANY WORK. OUR COMPANY!</span>
+        <span className="text-gray-100 text-lg">ANY WORK. OUR COMPANY!</span>
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-8">
         {stats.map((stat, i) => (

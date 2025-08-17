@@ -5,6 +5,7 @@ import RightSideCard from '../components/RightSideCard'
 import JourneySection from '../components/JourneySection'
 import CompanyInfo from '../components/CompanyInfo'
 import JobCategories from '../components/JobCategories'
+import Testimonials from '../components/Testimonials'
 import Footer from '../components/Footer'
 
 export default function Home() {
@@ -82,7 +83,12 @@ export default function Home() {
                 <JourneySection />
             </div>
 
-
+            <div className="w-screen min-h-1/2 px-10 flex flex-col justify-center items-center gap-8 p-12">
+                <h1 className="text-4xl font-bold text-center text-zinc-800 mb-8">
+                    What Our Clients Say
+                </h1>
+                <Testimonials />
+            </div>
             <hr className='bg-zinc-600' />
 
             <Footer />
