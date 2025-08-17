@@ -1,6 +1,5 @@
 // CompanyInfo.tsx
 import { motion } from "framer-motion";
-import React from "react";
 
 export default function CompanyInfo() {
   return (
@@ -20,7 +19,7 @@ export default function CompanyInfo() {
           Manpower UAE has been connecting top talent with leading companies since 2005.
           Our mission is to provide reliable staffing solutions tailored to your business needs.
         </p>
-        <button className="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition">
+        <button className="border-1 border-red-600 text-zinc-800 bg-red font-bold px-6 py-3 rounded-full hover:bg-red-700 transition">
           Learn More
         </button>
       </div>

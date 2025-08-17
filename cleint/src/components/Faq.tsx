@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
@@ -36,32 +38,68 @@ const Faq = () => {
   };
 
   return (
-    <div className="w-full bg-gray-100 py-12 px-6 rounded-2xl shadow-md">
-      <h2 className="text-center text-3xl font-bold text-gray-800 mb-10">
-        Frequently Asked <span className="text-red-600">Questions</span>
-      </h2>
-      <div className="max-w-3xl mx-auto space-y-4">
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-lg shadow p-4 cursor-pointer"
-            onClick={() => toggleFaq(index)}
-          >
-            <div className="flex justify-between items-center">
-              <h3 className="text-lg font-semibold text-gray-800">
-                {faq.question}
-              </h3>
-              <span className="text-gray-500">
-                {activeIndex === index ? "-" : "+"}
-              </span>
-            </div>
-            {activeIndex === index && (
-              <p className="mt-2 text-gray-600">{faq.answer}</p>
-            )}
-          </div>
-        ))}
+    <section className="w-full bg-gradient-to-r from-gray-50 via-white to-gray-50 py-16 px-6">
+      <div className="max-w-4xl mx-auto">
+        {/* Heading */}
+        <motion.h2
+          className="text-center text-4xl font-bold text-gray-800 mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Frequently Asked{" "}
+          <span className="text-red-600">Questions</span>
+        </motion.h2>
+
+        {/* FAQ Items */}
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <motion.div
+              key={index}
+              className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
+              {/* Question */}
+              <button
+                className="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none"
+                onClick={() => toggleFaq(index)}
+              >
+                <span className="text-lg font-medium text-gray-800">
+                  {faq.question}
+                </span>
+                <motion.span
+                  animate={{ rotate: activeIndex === index ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="text-red-600"
+                >
+                  <ChevronDown size={22} />
+                </motion.span>
+              </button>
+
+              {/* Answer */}
+              <AnimatePresence initial={false}>
+                {activeIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <p className="px-6 pb-4 text-gray-600 leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
