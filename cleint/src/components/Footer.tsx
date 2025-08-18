@@ -4,18 +4,18 @@ import { SiGoogle } from "react-icons/si";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-50 border-t border-gray-200 pt-10 pb-6">
+    <footer className="w-screen bg-gray-50 border-t border-gray-200 pt-10 pb-6">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Top section */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-5 gap-10"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
         >
           {/* Logo & Social */}
-          <div className="space-y-4 col-span-2">
+          <div className="space-y-4 sm:col-span-2 lg:col-span-2">
             <h2 className="text-2xl font-bold text-red-600">
               Al Mumtaz.<span className="text-black"></span>
             </h2>
@@ -24,15 +24,26 @@ export default function Footer() {
             </p>
 
             <div>
-              <h3 className="font-semibold mb-2">CONNECT WITH US</h3>
+              <h3 className="font-semibold mb-2 text-gray-800">
+                CONNECT WITH US
+              </h3>
               <div className="flex gap-3 text-white">
-                <a href="#" className="bg-black p-2 rounded-full hover:bg-red-600 transition">
+                <a
+                  href="#"
+                  className="bg-black p-2 rounded-full hover:bg-red-600 transition"
+                >
                   <FaFacebookF size={16} />
                 </a>
-                <a href="#" className="bg-black p-2 rounded-full hover:bg-red-600 transition">
+                <a
+                  href="#"
+                  className="bg-black p-2 rounded-full hover:bg-red-600 transition"
+                >
                   <FaInstagram size={16} />
                 </a>
-                <a href="#" className="bg-black p-2 rounded-full hover:bg-red-600 transition">
+                <a
+                  href="#"
+                  className="bg-black p-2 rounded-full hover:bg-red-600 transition"
+                >
                   <FaLinkedinIn size={16} />
                 </a>
               </div>
@@ -52,7 +63,7 @@ export default function Footer() {
 
           {/* The Company */}
           <div>
-            <h4 className="font-bold mb-3">The Company</h4>
+            <h4 className="font-bold mb-3 text-gray-800">The Company</h4>
             <ul className="space-y-2 text-gray-600 text-sm">
               {["About", "Clients", "Projects", "Contact Us"].map((item, idx) => (
                 <li key={idx}>
@@ -69,7 +80,7 @@ export default function Footer() {
 
           {/* Al Mumtaz Services */}
           <div>
-            <h4 className="font-bold mb-3">Al Mumtaz Services</h4>
+            <h4 className="font-bold mb-3 text-gray-800">Al Mumtaz Services</h4>
             <ul className="space-y-2 text-gray-600 text-sm">
               {[
                 "Al Mumtaz Supply",
@@ -77,7 +88,7 @@ export default function Footer() {
                 "Contract Staffing",
                 "Executive Search",
                 "HR Outsourcing",
-                "Security Solutions"
+                "Security Solutions",
               ].map((item, idx) => (
                 <li key={idx}>
                   <a
@@ -93,7 +104,7 @@ export default function Footer() {
 
           {/* Sectors We Serve */}
           <div>
-            <h4 className="font-bold mb-3">Sectors We Serve</h4>
+            <h4 className="font-bold mb-3 text-gray-800">Sectors We Serve</h4>
             <ul className="space-y-2 text-gray-600 text-sm">
               {[
                 "Oil and Gas",
@@ -101,7 +112,7 @@ export default function Footer() {
                 "Facility Management",
                 "Logistics",
                 "Manufacturing",
-                "Mechanical & Electrical Plumbing"
+                "Mechanical & Electrical Plumbing",
               ].map((item, idx) => (
                 <li key={idx}>
                   <a
@@ -127,14 +138,17 @@ export default function Footer() {
 
         {/* Bottom section */}
         <motion.div
-          className="mt-4 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500"
+          className="mt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 gap-3"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p>Copyright © 2023. Al Mumtaz ANY WORK. OUR COMPANY! All rights reserved.</p>
-          <div className="flex gap-6 mt-2 md:mt-0">
+          <p className="text-center md:text-left text-xs sm:text-sm">
+            Copyright © 2023. Al Mumtaz ANY WORK. OUR COMPANY! All rights
+            reserved.
+          </p>
+          <div className="flex gap-4 sm:gap-6 flex-wrap justify-center">
             {["Privacy Policy", "Terms and Conditions"].map((item, idx) => (
               <a
                 key={idx}
