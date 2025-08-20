@@ -16,7 +16,7 @@ export default function Footer() {
         >
           {/* Logo & Social */}
           <div className="space-y-4 sm:col-span-2 lg:col-span-2">
-            <h2 className="text-2xl font-bold text-red-600">
+            <h2 className="text-2xl font-bold text-orange-600">
               Al Mumtaz.<span className="text-black"></span>
             </h2>
             <p className="text-sm tracking-wide text-gray-500">
@@ -30,19 +30,19 @@ export default function Footer() {
               <div className="flex gap-3 text-white">
                 <a
                   href="#"
-                  className="bg-black p-2 rounded-full hover:bg-red-600 transition"
+                  className="bg-black p-2 rounded-full hover:bg-orange-600 transition"
                 >
                   <FaFacebookF size={16} />
                 </a>
                 <a
                   href="#"
-                  className="bg-black p-2 rounded-full hover:bg-red-600 transition"
+                  className="bg-black p-2 rounded-full hover:bg-orange-600 transition"
                 >
                   <FaInstagram size={16} />
                 </a>
                 <a
                   href="#"
-                  className="bg-black p-2 rounded-full hover:bg-red-600 transition"
+                  className="bg-black p-2 rounded-full hover:bg-orange-600 transition"
                 >
                   <FaLinkedinIn size={16} />
                 </a>
@@ -50,7 +50,7 @@ export default function Footer() {
             </div>
 
             <div className="flex items-center gap-2 mt-3">
-              <SiGoogle className="text-2xl text-red-500" />
+              <SiGoogle className="text-2xl text-orange-500" />
               <span className="text-sm font-medium">Review us on Google</span>
             </div>
 
@@ -69,7 +69,7 @@ export default function Footer() {
                 <li key={idx}>
                   <a
                     href="#"
-                    className="relative transition-colors duration-300 hover:text-red-600 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-red-600 hover:after:w-full after:transition-all after:duration-300"
+                    className="relative transition-colors duration-300 hover:text-orange-600 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-orange-600 hover:after:w-full after:transition-all after:duration-300"
                   >
                     {item}
                   </a>
@@ -93,7 +93,7 @@ export default function Footer() {
                 <li key={idx}>
                   <a
                     href="#"
-                    className="relative transition-colors duration-300 hover:text-red-600 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-red-600 hover:after:w-full after:transition-all after:duration-300"
+                    className="relative transition-colors duration-300 hover:text-orange-600 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-orange-600 hover:after:w-full after:transition-all after:duration-300"
                   >
                     {item}
                   </a>
@@ -117,7 +117,7 @@ export default function Footer() {
                 <li key={idx}>
                   <a
                     href="#"
-                    className="relative transition-colors duration-300 hover:text-red-600 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-red-600 hover:after:w-full after:transition-all after:duration-300"
+                    className="relative transition-colors duration-300 hover:text-orange-600 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-orange-600 hover:after:w-full after:transition-all after:duration-300"
                   >
                     {item}
                   </a>
@@ -129,7 +129,7 @@ export default function Footer() {
 
         {/* Divider */}
         <motion.hr
-          className="border-t border-red-200 mt-10"
+          className="border-t border-orange-200 mt-10"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           transition={{ duration: 0.8 }}
@@ -153,7 +153,7 @@ export default function Footer() {
               <a
                 key={idx}
                 href="#"
-                className="relative transition-colors duration-300 hover:text-red-600 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-red-600 hover:after:w-full after:transition-all after:duration-300"
+                className="relative transition-colors duration-300 hover:text-orange-600 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1px] after:bg-orange-600 hover:after:w-full after:transition-all after:duration-300"
               >
                 {item}
               </a>

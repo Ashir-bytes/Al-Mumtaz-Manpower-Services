@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "What services does Al Mumtaz provide?",
     answer:
-      "Al Mumtaz provides manpower supply services, including skilled and unskilled labor, to meet the needs of various industries.",
+      "Al Mumtaz provides Al Mumtaz supply services, including skilled and unskilled labor, to meet the needs of various industries.",
   },
   {
     question: "How can I contact Al Mumtaz for inquiries?",
@@ -19,9 +19,9 @@ const faqs = [
       "We serve a wide range of industries, including construction, hospitality, healthcare, and more.",
   },
   {
-    question: "Does Al Mumtaz provide international manpower?",
+    question: "Does Al Mumtaz provide international Al Mumtaz?",
     answer:
-      "Yes, we specialize in providing international manpower solutions tailored to your business needs.",
+      "Yes, we specialize in providing international Al Mumtaz solutions tailoorange to your business needs.",
   },
   {
     question: "How does Al Mumtaz ensure quality in its services?",
@@ -49,7 +49,7 @@ const Faq = () => {
           viewport={{ once: true }}
         >
           Frequently Asked{" "}
-          <span className="text-red-600">Questions</span>
+          <span className="text-orange-600">Questions</span>
         </motion.h2>
 
         {/* FAQ Items */}
@@ -74,7 +74,7 @@ const Faq = () => {
                 <motion.span
                   animate={{ rotate: activeIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
-                  className="text-red-600"
+                  className="text-orange-600"
                 >
                   <ChevronDown size={22} />
                 </motion.span>

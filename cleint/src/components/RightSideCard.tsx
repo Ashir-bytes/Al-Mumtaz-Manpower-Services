@@ -9,7 +9,7 @@ interface RightSideCardProps {
 function RightSideCard({ header, content, imgSrc }: RightSideCardProps) {
   return (
     <motion.div
-      className="flex flex-col md:flex-row w-full rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-2xl transition-shadow duration-300"
+      className="flex flex-col md:flex-row w-full rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-700 hover:shadow-2xl transition-shadow duration-300"
       initial={{ opacity: 0, x: 80 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}

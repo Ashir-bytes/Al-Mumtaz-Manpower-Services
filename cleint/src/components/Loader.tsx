@@ -6,7 +6,7 @@ export default function Loader() {
             {[...Array(9)].map((_, i) => (
               <motion.div
                 key={i}
-                className="w-6 h-6 rounded-lg bg-gradient-to-r from-[#CD2D4B] to-red-500"
+                className="w-6 h-6 rounded-lg bg-gradient-to-r from-[#a82dcd] to-purple-500"
                 animate={{ scale: [1, 1.3, 1]  }}
                 transition={{
                   repeat: Infinity,

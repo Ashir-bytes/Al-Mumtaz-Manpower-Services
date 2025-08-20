@@ -26,10 +26,10 @@ export default function HeroSection() {
           transition={{ duration: 1 }}
         >
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-            Your Trusted <span className="text-red-500">Workforce Partner</span>
+            Your Trusted <span className="text-orange-500">Workforce Partner</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-gray-300 max-w-xl">
-            We provide skilled manpower solutions tailored to your business needs. 
+            We provide skilled Al Mumtaz solutions tailoorange to your business needs. 
             From construction to corporate staffing, we ensure reliable and professional support anytime, anywhere.
           </p>
 
@@ -38,7 +38,7 @@ export default function HeroSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-red-500 hover:bg-red-600 px-6 py-3 rounded-full font-semibold flex items-center gap-2 transition"
+              className="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-full font-semibold flex items-center gap-2 transition"
             >
               Get Started <ArrowRight size={18} />
             </motion.button>
@@ -60,7 +60,7 @@ export default function HeroSection() {
           transition={{ duration: 1 }}
         >
           <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 w-80 h-80 flex flex-col justify-center items-center shadow-2xl border border-white/20">
-            <h3 className="text-2xl font-bold text-red-500">10+ Years</h3>
+            <h3 className="text-2xl font-bold text-orange-500">10+ Years</h3>
             <p className="text-gray-200 mt-2 text-center">Industry Experience</p>
             <div className="mt-6 grid grid-cols-2 gap-6 text-center">
               <div>

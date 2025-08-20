@@ -55,7 +55,7 @@ const JourneySection = () => {
   return (
     <div
       ref={ref}
-      className="w-full bg-gradient-to-r from-red-600 to-red-400 py-12 rounded-2xl shadow-md"
+      className="w-full bg-gradient-to-r from-orange-600 to-orange-400 py-12 shadow-md"
     >
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
@@ -75,7 +75,7 @@ const JourneySection = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: i * 0.2 }}
-            className="text-center text-white p-6 border-r last:border-none border-red-300"
+            className="text-center text-white p-6 border-r last:border-none border-orange-300"
           >
             <h3 className="text-4xl font-extrabold">
               <Counter target={stat.target} start={inView} />

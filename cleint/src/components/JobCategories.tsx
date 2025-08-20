@@ -12,37 +12,37 @@ import {
 const jobCategories = [
   {
     icon: <User size={32} />,
-    title: "Civil Manpower Supply",
+    title: "Civil Al Mumtaz Supply",
     description:
-      "For the Civil domain projects, we supply a professional team of Construction Manpower. Our team will ensure that you get the right quantity and quality of Manpower as per your requirements.",
+      "For the Civil domain projects, we supply a professional team of Construction Al Mumtaz. Our team will ensure that you get the right quantity and quality of Al Mumtaz as per your requirements.",
   },
   {
     icon: <Hammer size={32} />,
-    title: "Mechanical Manpower Supply",
+    title: "Mechanical Al Mumtaz Supply",
     description:
-      "Working on a project with a deadline puts extra pressure on the existing team. Our Mechanical Manpower Supply will get you ready to deliver according to the due dates and achieve all your short term goals.",
+      "Working on a project with a deadline puts extra pressure on the existing team. Our Mechanical Al Mumtaz Supply will get you ready to deliver according to the due dates and achieve all your short term goals.",
   },
   {
     icon: <Building size={32} />,
-    title: "Electrical Manpower Supply",
+    title: "Electrical Al Mumtaz Supply",
     description:
       "No matter what industry or domain you work for, a secure electrical setup is the first layer of protection you can provide. We provide experienced teams to work for you for a designated time period.",
   },
   {
     icon: <FileText size={32} />,
-    title: "Plumbing Manpower Supply",
+    title: "Plumbing Al Mumtaz Supply",
     description:
       "We have been keen on the performance and quality of work of our professionals. Besides selecting qualified plumbers, we conduct periodic examination to confirm their capabilities.",
   },
   {
     icon: <Users size={32} />,
-    title: "Helper Manpower Supply",
+    title: "Helper Al Mumtaz Supply",
     description:
       "Helper is someone who assists you in timely finishing the task at hand. We have a large pool of reliable helpers who can work on your terms and requirements.",
   },
   {
     icon: <Trash2 size={32} />,
-    title: "Cleaning Manpower Supply",
+    title: "Cleaning Al Mumtaz Supply",
     description:
       "Cleaner is someone who assists you in timely finishing the task at hand. We have a large pool of reliable cleaners, who can work on your terms and requirements.",
   },
@@ -56,7 +56,7 @@ export default function JobCategories() {
           Al Mumtaz Supply Services in Dubai, UAE
         </h2>
         <p className="text-gray-600 leading-relaxed">
-          At manpower.ae, a trusted Manpower supplier in Dubai, UAE, our main
+          At almumtazmanpowerservices, a trusted Al Mumtaz supplier in Dubai, UAE, our main
           aim is to supply skilled workers for short & long term at affordable
           rates. To attain this objective, we offer services like:
         </p>
@@ -78,13 +78,13 @@ export default function JobCategories() {
           >
             {/* Gradient Border Glow */}
             <div className="absolute inset-0 rounded-2xl border-2 border-transparent 
-                            group-hover:border-red-500/50 transition-all duration-500"></div>
+                            group-hover:border-orange-500/50 transition-all duration-500"></div>
 
-            <div className="text-red-600 group-hover:scale-110 transform transition-transform duration-300">
+            <div className="text-orange-600 group-hover:scale-110 transform transition-transform duration-300">
               {job.icon}
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-800 group-hover:text-red-600 transition-colors duration-300">
+            <h3 className="text-2xl font-semibold text-gray-800 group-hover:text-orange-600 transition-colors duration-300">
               {job.title}
             </h3>
 
@@ -94,9 +94,9 @@ export default function JobCategories() {
 
             {/* Underline Animation */}
             <a
-              className="mt-auto relative text-red-600 font-semibold flex items-center gap-1 
+              className="mt-auto relative text-orange-600 font-semibold flex items-center gap-1 
                          after:content-[''] after:absolute after:-bottom-1 after:left-0 
-                         after:h-[2px] after:w-0 after:bg-gradient-to-r from-red-500 to-pink-500 
+                         after:h-[2px] after:w-0 after:bg-gradient-to-r from-orange-500 to-pink-500 
                          after:transition-all after:duration-500 group-hover:after:w-full"
               href="#"
             >

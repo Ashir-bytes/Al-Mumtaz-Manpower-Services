@@ -11,15 +11,15 @@ export default function CompanyInfo() {
       viewport={{ once: true }}
     >
       {/* Text */}
-      <div className="flex-1">
-        <h2 className="text-4xl font-bold text-gray-800 mb-4">
+      <div className="flex-1 text-center md:text-left">
+        <h2 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
           About Us
         </h2>
-        <p className="text-gray-600 text-lg mb-6">
+        <p className="text-gray-600 text-lg mb-6 max-w-lg mx-auto md:mx-0">
           Manpower UAE has been connecting top talent with leading companies since 2005.
           Our mission is to provide reliable staffing solutions tailored to your business needs.
         </p>
-        <button className="border-1 border-red-600 text-zinc-800 bg-red font-bold px-6 py-3 rounded-full hover:bg-red-700 transition">
+        <button className="border border-orange-600 text-orange-600 font-bold px-6 py-3 rounded-full hover:bg-orange-500 hover:text-white transition">
           Learn More
         </button>
       </div>
@@ -27,7 +27,7 @@ export default function CompanyInfo() {
       {/* Image */}
       <div className="flex-1">
         <motion.img
-          src="./Home/Contract-Staffing.webp" // replace with your image
+          src="/Home/Contract-Staffing.webp" // from /public/Home/
           alt="Team"
           className="rounded-xl shadow-lg"
           initial={{ scale: 0.9, opacity: 0 }}

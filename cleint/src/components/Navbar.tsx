@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Phone, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom"; // <-- Ye import add kiya
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,7 +21,7 @@ export default function Navbar() {
     visible: {
       x: 0,
       opacity: 1,
-      transition: { type: "spring" as const, stiffness: 70 }, // <-- as const
+      transition: { type: "spring" as const, stiffness: 70 },
     },
     exit: {
       x: "100%",
@@ -28,7 +29,6 @@ export default function Navbar() {
       transition: { duration: 0.1 },
     },
   };
-
 
   const dropdownVariants = {
     hidden: { opacity: 0, y: -10 },
@@ -41,30 +41,25 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 80 }}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "shadow-lg bg-white" : "bg-white"
-        }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? "shadow-lg bg-white" : "bg-white"
+      }`}
     >
       {/* Top Bar */}
-      <div className="bg-gray-100 hidden md:flex justify-around items-center px-6 lg:px-20 py-2 text-sm">
+      <div className="bg-orange-400 hidden md:flex justify-around items-center px-6 lg:px-20 py-2 text-sm">
         <div className="flex gap-6">
-          {["About us", "Projects", "Clients", "Insights"].map((item) => (
-            <a
-              key={item}
-              href="#"
-              className="text-red-950 hover:text-red-600 transition"
-            >
-              {item}
-            </a>
-          ))}
+          <Link
+            to="/about"
+            className="text-white font-bold hover:text-orange-900 transition duration-300"
+          >
+            Want to grow your business? Start today!
+          </Link>
         </div>
-        <div className="flex gap-6 items-center text-red-600">
-          <span className="flex items-center gap-1">
-            <Phone size={16} /> 055 - 12345678
+        <div className="flex gap-6 items-center text-white">
+          <span className="flex items-center gap-1  font-bold  hover:text-orange-900 transition duration-300">
+            <Phone size={16} /> +971-4-3438006
           </span>
-          <span className="flex items-center gap-1">
-            <Phone size={16} /> +971 50 1234567
-          </span>
-          <span className="flex items-center gap-1">
+          <span className="flex items-center gap-1  font-bold  hover:text-orange-900 transition duration-300">
             <Mail size={16} /> info@AlMumtaz.com
           </span>
         </div>
@@ -74,12 +69,13 @@ export default function Navbar() {
       <div className="flex justify-around items-center px-6 lg:px-20 py-4 relative">
         {/* Logo */}
         <div className="flex flex-col items-center gap-1">
-          <h1 className="text-3xl tracking-wide text-red-500 font-bold">
-            Al Mumtaz
-          </h1>
-          <p className="text-xs tracking-wide text-red-600 font-semibold">
-            ANY WORK. OUR COMPANY!
-          </p>
+          <Link to="/">
+            <img
+              className="w-16 h-auto object-cover"
+              src="/Qiz-logo.webp"
+              alt="Al Mumtaz - ANY WORK. OUR COMPANY!"
+            />
+          </Link>
         </div>
 
         {/* Desktop Menu */}
@@ -90,7 +86,7 @@ export default function Navbar() {
             onMouseEnter={() => setIsServicesOpen(true)}
             onMouseLeave={() => setIsServicesOpen(false)}
           >
-            <button className="text-zinc-800 hover:text-red-600 transition flex items-center gap-1">
+            <button className="text-zinc-800 hover:text-orange-600 transition flex items-center gap-1">
               Services ▼
             </button>
             <AnimatePresence>
@@ -103,42 +99,48 @@ export default function Navbar() {
                   className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg overflow-hidden w-56 z-50"
                 >
                   {[
-                    "Manpower Supply",
-                    "Recruitment",
-                    "Contract Staffing",
-                    "Executive Search",
-                    "HR Outsourcing",
-                    "Security Solutions",
+                    { name: "Al Mumtaz Supply", path: "/services/supply" },
+                    { name: "Recruitment", path: "/services/recruitment" },
+                    { name: "Contract Staffing", path: "/services/staffing" },
+                    { name: "Executive Search", path: "/services/executive" },
+                    { name: "HR Outsourcing", path: "/services/hr" },
+                    { name: "Security Solutions", path: "/services/security" },
                   ].map((service) => (
-                    <a
-                      key={service}
-                      href="#"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition"
+                    <Link
+                      key={service.name}
+                      to={service.path}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition"
                     >
-                      {service}
-                    </a>
+                      {service.name}
+                    </Link>
                   ))}
                 </motion.div>
               )}
             </AnimatePresence>
           </div>
 
-          <a href="#sectors" className="text-zinc-800 hover:text-red-600 transition">
+          <Link to="/about" className="text-zinc-800 hover:text-orange-600 transition">
             About Us
-          </a>
-          <a href="#contact" className="text-zinc-800 hover:text-red-500 font-semibold">
+          </Link>
+          <Link
+            to="/contact"
+            className="text-zinc-800 hover:text-orange-500 font-semibold"
+          >
             Contact Us
-          </a>
-          <button className="border border-red-500 text-gray-800 px-5 py-2 rounded-full hover:bg-red-500 hover:text-white transition">
+          </Link>
+          <Link
+            to="/book"
+            className="border border-orange-500 text-gray-800 px-5 py-2 rounded-full hover:bg-orange-500 hover:text-white transition"
+          >
             Book Service
-          </button>
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button
             onClick={() => setIsMenuOpen(true)}
-            className="text-gray-800 hover:text-red-500 text-2xl"
+            className="text-gray-800 hover:text-orange-500 text-2xl"
           >
             ☰
           </button>
@@ -157,39 +159,46 @@ export default function Navbar() {
           >
             <button
               onClick={() => setIsMenuOpen(false)}
-              className="text-2xl mb-6 hover:text-red-500"
+              className="text-2xl mb-6 hover:text-orange-500"
             >
               ✕
             </button>
             <nav className="flex flex-col gap-6 font-medium">
               <details>
-                <summary className="cursor-pointer hover:text-red-600">
+                <summary className="cursor-pointer hover:text-orange-600">
                   Services
                 </summary>
                 <div className="pl-4 mt-2 flex flex-col gap-2">
                   {[
-                    "Manpower Supply",
-                    "Recruitment",
-                    "Contract Staffing",
-                    "Executive Search",
-                    "HR Outsourcing",
-                    "Security Solutions",
+                    { name: "Al Mumtaz Supply", path: "/services/supply" },
+                    { name: "Recruitment", path: "/services/recruitment" },
+                    { name: "Contract Staffing", path: "/services/staffing" },
+                    { name: "Executive Search", path: "/services/executive" },
+                    { name: "HR Outsourcing", path: "/services/hr" },
+                    { name: "Security Solutions", path: "/services/security" },
                   ].map((service) => (
-                    <a
-                      key={service}
-                      href="#"
-                      className="text-gray-700 hover:text-red-600 text-sm"
+                    <Link
+                      key={service.name}
+                      to={service.path}
+                      className="text-gray-700 hover:text-orange-600 text-sm"
                     >
-                      {service}
-                    </a>
+                      {service.name}
+                    </Link>
                   ))}
                 </div>
               </details>
-              <a href="#sectors" className="hover:text-red-600">Sectors We Serve</a>
-              <a href="#contact" className="text-red-500 font-semibold">Contact Us</a>
-              <button className="border border-red-500 text-gray-800 px-4 py-2 rounded-full hover:bg-red-500 hover:text-white transition">
+              <Link to="/about" className="hover:text-orange-600">
+                About Us
+              </Link>
+              <Link to="/contact" className="text-orange-500 font-semibold">
+                Contact Us
+              </Link>
+              <Link
+                to="/book"
+                className="border border-orange-500 text-gray-800 px-4 py-2 rounded-full hover:bg-orange-500 hover:text-white transition"
+              >
                 Book Service
-              </button>
+              </Link>
             </nav>
           </motion.div>
         )}
